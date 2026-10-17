@@ -41,4 +41,3 @@ Envelope: version1, sender, recipient, methodPOST, exact path, run_id, timestamp
 `POST /api/demo/denial-test` body{} actually sends B's authenticated identity/key to A's endpoint. Expected403 is returned and audited. It separately labels whether OS filesystem isolation is configured; the API test alone does not prove it.
 
 `GET /api/audit` verifies the local hash/HMAC chain and returns its head and assumptions. Use CLI `verify-audit --anchor DIGEST` for an externally retained anchor, or `--tamper-demo` to mutate an in-memory copy without damaging the live log.
-

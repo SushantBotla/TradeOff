@@ -83,4 +83,3 @@ class Store:
         return dict(valid=valid and anchor_matches, checked=len(rows), head=previous, failure_event=failure,
                     anchor_checked=anchor is not None, anchor_matches=anchor_matches,
                     assumptions="Local chain verification; privileged key holders can rewrite it. Export an external anchor to detect truncation/rewrite.")
-

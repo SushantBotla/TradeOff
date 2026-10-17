@@ -24,4 +24,3 @@ def supplier_profiles():
                        manufacturing_unit_cost=18, wafer_inventory=9000,
                        client_book=["SYNTHETIC_PRIVATE_CLIENT_001"])
             for name, c in capacities.items()}
-

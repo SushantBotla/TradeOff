@@ -121,4 +121,3 @@ class Evaluator:
         while True:
             self.process_once()
             time.sleep(0.4)
-

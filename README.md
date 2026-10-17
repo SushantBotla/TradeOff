@@ -11,6 +11,8 @@ A runnable LinuxONE hackathon product for restricted-information shortage coordi
 
 The **public showcase** replays five actual LinuxONE recordings and performs fresh risk inference in your browser using learned coefficients. It requires no login. **New optimization jobs** run in the authenticated Python app, locally or on LinuxONE behind SSH. The UI labels these modes explicitly.
 
+![TradeOff homepage](docs/assets/homepage.png)
+
 The default AI feature is **real local delivery-delay prediction**: a logistic regression trained on the supplied DataCo dataset, evaluated on a chronological holdout, and used to prioritize participant validation requests. The coordination state machine and allocation solver are deterministic. This is not presented as an LLM. Optional Responses API / OpenAI-compatible tool-calling adapters are included for a generative coordinator.
 
 ## Quick start: no package installation required
@@ -149,7 +151,7 @@ python -m http.server 8090 --bind 127.0.0.1 --directory _site
 
 Pushes to `main` run the tests and publish `_site` to GitHub Pages. Refresh the approved public synthetic recordings from an authenticated loopback runtime with `python infra/export_demo.py --token-file PATH_TO_LOCAL_TOKEN`. The exporter checks for s390x, allowlists public fields and rejects accidental token inclusion. Raw customer rows, participant databases and credentials are never site assets.
 
-See [design handoff](docs/PRODUCT-DESIGN.md) for colors, typography, layouts and the importable SVG board for Figma. See [release verification](docs/VERIFICATION.md), [deployment](docs/DEPLOYMENT.md), and [math](docs/MATH.md) for evidence and limitations.
+See [design handoff](docs/PRODUCT-DESIGN.md) for colors, typography, layouts and the importable SVG board for Figma. See [release verification](docs/VERIFICATION.md), [deployment](docs/DEPLOYMENT.md), [team handoff](docs/HANDOFF.md), and [math](docs/MATH.md) for evidence and limitations.
 
 ## Project map
 
@@ -168,4 +170,3 @@ Package source with `python -m tradeoff package`. The ZIP contains a SHA-256 man
 ## Limits
 
 Cooperative participants; no incentive-compatible mechanism or payments. No batch constraints or multi-day scheduling. Restricted disclosure is not formal secrecy; aggregate benchmarks and feedback reveal additional information. Shared-key authentication is not encryption or nonrepudiation. The local audit chain is tamper-evident only under stated key and external-anchor assumptions. No CPACF acceleration or hardware performance advantage is asserted. The application does not automatically submit to a hackathon platform without the actual submission details.
-

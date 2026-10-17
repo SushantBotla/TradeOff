@@ -52,4 +52,3 @@ def verify(envelope, key, sender, recipient, path, run_id=None, db_path=None, no
 
 def bearer_matches(header, token):
     return isinstance(header, str) and hmac.compare_digest(header, "Bearer " + token)
-

@@ -94,4 +94,3 @@ def check_proposal(proposal, offer, bids, floors=None):
         integer(proposal["allocations"][name], "allocation", low=(floors or {}).get(name, 0), high=bids[name]["requested_qty"])
     if sum(proposal["allocations"].values()) > offer["primary_capacity"] + y:
         raise TradeOffError("Allocation exceeds supply")
-

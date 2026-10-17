@@ -87,4 +87,3 @@ def summarize(csv_path):
                              "No observed safety stock, shortage loss curve, common-component capacity or emergency procurement cost is inferred.",
                              "Core optimization presets remain explicitly synthetic; this summary is context, not validated shortage ground truth."],
                 privacy=dict(raw_customer_rows_exported=False, sent_to_llm=False))
-

@@ -95,4 +95,3 @@ def serve(handler, port):
     server = ThreadingHTTPServer(("127.0.0.1", port), handler)
     server.daemon_threads = True
     server.serve_forever()
-

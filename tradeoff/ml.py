@@ -135,4 +135,3 @@ class RiskModel:
         return dict(delay_probability=round(probability, 6), model=self.model["version"],
                     inputs=dict(shipping_mode=shipping_mode, scheduled_days=scheduled_days, market=market),
                     provenance="Local inference from learned historical DataCo coefficients; illustrative domain transfer")
-

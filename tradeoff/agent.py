@@ -149,4 +149,3 @@ def safe_action(proposal, feedback, rounds):
     if all(item["accept"] for item in feedback.values()):
         return "finalize"
     return "reoptimize_with_feedback" if rounds < 2 else "declare_unresolved"
-

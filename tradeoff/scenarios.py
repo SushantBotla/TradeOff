@@ -15,4 +15,3 @@ SHIPMENT_CONTEXTS = {
     "factory_a": dict(shipping_mode="First Class", scheduled_days=1, market="USCA"),
     "factory_b": dict(shipping_mode="Standard Class", scheduled_days=4, market="USCA"),
 }
-

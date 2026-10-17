@@ -29,4 +29,3 @@ Round 1 A560/B240/y0 is physically feasible but rejected by B's service policy. 
 Primary capacity480: reference A460/B300/y280 at44900; restricted repair A480/B300/y300 at45000. Combined capacity480+150 cannot satisfy both service floors460+300, and coordination remains unresolved.
 
 No-scarcity reference cost0 yields relative gapN/A. Coarse requests may still draw stock unnecessarily, so absolute regret is available. The system never forces a positive gap or promises a target percentage.
-

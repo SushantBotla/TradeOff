@@ -23,4 +23,3 @@ sudo bash "$work_dir/infra/install_linuxone.sh"
 '@
 $remoteCommand | ssh -i $resolvedKeyPath $sshTarget 'bash -s'
 if ($LASTEXITCODE -ne 0) { throw 'Remote installation failed; inspect the output.' }
-

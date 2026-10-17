@@ -233,4 +233,3 @@ def main(argv=None):
     except (TradeOffError, OSError, ValueError) as exc:
         print("TradeOff: " + str(exc), file=sys.stderr)
         raise SystemExit(1) from None
-

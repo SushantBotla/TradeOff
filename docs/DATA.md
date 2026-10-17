@@ -27,4 +27,3 @@ At runtime the local learned model predicts risks for public illustrative shippi
 ## What DataCo does not establish
 
 Retail order lines do not establish private chip inventory, a shared interchangeable component, supplier available capacity, severe-shortage cost curves, medical priority, or emergency procurement costs. Those optimizer inputs remain explicitly synthetic. The streaming importer creates aggregate category/lead-time summaries for context and does not silently convert unrelated categories into competing manufacturers.
-

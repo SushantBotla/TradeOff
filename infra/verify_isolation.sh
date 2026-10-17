@@ -21,4 +21,3 @@ db.close()
 print("PASS: privileged evaluator can read synthetic benchmark data")
 '
 echo "Filesystem checks pass. VM root/administrators remain trusted."
-

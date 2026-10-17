@@ -90,4 +90,3 @@ fi
 echo "Installed with local ML enabled. Optional LLM settings: sudoedit /etc/tradeoff/llm.env, then restart tradeoff@coordinator."
 echo "SSH tunnel from laptop: ssh -L 8000:127.0.0.1:8000 USER@VM"
 echo "Print dashboard token: sudo -u tradeoff-coordinator $app_dir/venv/bin/python -m tradeoff token --config $state_dir/coordinator/config.json"
-

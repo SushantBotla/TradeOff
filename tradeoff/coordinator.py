@@ -289,4 +289,3 @@ def coordinator_server(config):
             raise TradeOffError("Endpoint not found", 404)
 
     serve(CoordinatorHandler, config["port"])
-

@@ -51,4 +51,3 @@ def initialize(root, port=8000, isolated=False):
     write_json(root / "evaluator" / "config.json", dict(role="evaluator", private_databases=private_databases,
                exchange_dir=str(root / "exchange"), reports_dir=str(root / "reports")))
     return coordinator
-

@@ -1,4 +1,3 @@
 # Optional. The complete small-instance app also works with the stdlib exact solver.
 # Supply CBC separately, e.g. apt install coinor-cbc on Ubuntu s390x.
 PuLP==3.3.1
-

@@ -30,4 +30,3 @@ Local ML is the demonstrated AI feature; optional external generative tool-calli
 - Why not always optimal? Coarse requests/priority signals hide cost curves and stock decisions. Zero or large gaps are possible and displayed honestly.
 
 Before submitting: fill in the actual event form, team credits and required repository/video links. The app cannot invent a submission destination. Capture a backup recording of the real VM run using the event team's normal screen recorder.
-

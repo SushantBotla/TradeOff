@@ -30,4 +30,3 @@ When forwarding, `ssh -L 8080:127.0.0.1:8000 ...` permits opening127.0.0.1:8080 
 For a clean demo, use the reset-view endpoint. It preserves audit/run history. Do not delete participant DBs or regenerate credentials during a live event. Installer reruns preserve existing initialized state and provider configuration. Back up `/var/lib/tradeoff` through a trusted administrative channel if needed; it contains credentials/private data and must never enter the public source ZIP.
 
 Package source with `python -m tradeoff package`; `MANIFEST.json` lists per-file SHA-256. Verify the source bundle checksum before installing on the VM. The Windows deployment helper retains ordinary SSH host-key verification. Never disable host-key verification to work around an unknown fingerprint.
-

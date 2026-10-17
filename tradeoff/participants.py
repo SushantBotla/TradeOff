@@ -90,4 +90,3 @@ def participant_server(config):
             self.send(200, result)
 
     serve(ParticipantHandler, config["port"])
-

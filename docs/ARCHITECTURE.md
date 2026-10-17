@@ -42,4 +42,3 @@ The optional LLM coordinator receives only bid signals, supply offers, current a
 - HMAC means shared-key message authentication, not encryption, nonrepudiation or truthfulness.
 - Audit events chain SHA-256 digests and authenticate each digest with a separate audit HMAC key. `verify-audit --anchor DIGEST` checks an externally retained anchor. Without an external anchor, a privileged key holder can rewrite/truncate a locally consistent chain.
 - Transport to external model APIs uses HTTPS; participants communicate on the trusted host's loopback. No claim of protection from malicious host administrators or hardware-backed execution is made.
-
