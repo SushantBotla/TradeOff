@@ -1,0 +1,22 @@
+name: Verify product
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s tests -v
+      - run: python tradeoff_validation.py
+      - run: node --check tradeoff/web/app.js && node --check tradeoff/web/home.js
+      - run: python infra/build_site.py
+      - run: bash -n infra/install_linuxone.sh infra/verify_isolation.sh

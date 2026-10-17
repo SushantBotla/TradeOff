@@ -1,0 +1,25 @@
+[Unit]
+Description=TradeOff %i service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tradeoff-%i
+Group=tradeoff-%i
+WorkingDirectory=/opt/tradeoff
+ExecStart=/opt/tradeoff/venv/bin/python -m tradeoff serve --config /var/lib/tradeoff/%i/config.json --env-file /etc/tradeoff/llm.env
+Restart=on-failure
+RestartSec=2
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/tradeoff/%i /var/lib/tradeoff/exchange /var/lib/tradeoff/reports
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target
+

@@ -1,0 +1,138 @@
+{
+  "scope": "Synthetic integer-chip example; no batches; no payments; primary cost treated as sunk.",
+  "oracle_baseline": {
+    "xA": 500,
+    "xB": 300,
+    "y": 0,
+    "true_cost": 14700,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 60,
+    "shortage_B": 150,
+    "optimized_objective": 14700
+  },
+  "oracle_baseline_with_service_floors": {
+    "xA": 500,
+    "xB": 300,
+    "y": 0,
+    "true_cost": 14700,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 60,
+    "shortage_B": 150,
+    "optimized_objective": 14700
+  },
+  "original_claim_y60": {
+    "xA": 560,
+    "xB": 300,
+    "y": 60,
+    "true_cost": 15000,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 0,
+    "shortage_B": 150
+  },
+  "coarse_round1": {
+    "xA": 560,
+    "xB": 240,
+    "y": 0,
+    "true_cost": 15900,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 0,
+    "shortage_B": 210,
+    "optimized_objective": 15750,
+    "gap_percent": 8.163265
+  },
+  "original_round2_raise_entire_B_bid": {
+    "xA": 560,
+    "xB": 450,
+    "y": 210,
+    "true_cost": 23250,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 0,
+    "shortage_B": 0,
+    "optimized_objective": 19950,
+    "gap_percent": 58.163265
+  },
+  "corrected_round2_keep_bid_add_floor": {
+    "xA": 560,
+    "xB": 300,
+    "y": 60,
+    "true_cost": 15000,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 0,
+    "shortage_B": 150,
+    "optimized_objective": 16950,
+    "gap_percent": 2.040816
+  },
+  "oracle_primary_disruption": {
+    "xA": 460,
+    "xB": 300,
+    "y": 280,
+    "true_cost": 44900,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 100,
+    "shortage_B": 150,
+    "optimized_objective": 44900
+  },
+  "oracle_primary_disruption_with_service_floors": {
+    "xA": 460,
+    "xB": 300,
+    "y": 280,
+    "true_cost": 44900,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 100,
+    "shortage_B": 150,
+    "optimized_objective": 44900
+  },
+  "corrected_primary_disruption": {
+    "xA": 480,
+    "xB": 300,
+    "y": 300,
+    "true_cost": 45000,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 80,
+    "shortage_B": 150,
+    "optimized_objective": 52950
+  },
+  "oracle_alt_only_disruption": {
+    "xA": 500,
+    "xB": 300,
+    "y": 0,
+    "true_cost": 14700,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 60,
+    "shortage_B": 150,
+    "optimized_objective": 14700
+  },
+  "combined_disruption_round1": {
+    "xA": 560,
+    "xB": 0,
+    "y": 80,
+    "true_cost": 49900,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 0,
+    "shortage_B": 450,
+    "optimized_objective": 41350
+  },
+  "combined_disruption_round2": {
+    "xA": 330,
+    "xB": 300,
+    "y": 150,
+    "true_cost": 61150,
+    "stock_A": 40,
+    "stock_B": 50,
+    "shortage_A": 230,
+    "shortage_B": 150,
+    "optimized_objective": 63450
+  },
+  "combined_disruption_both_floors": null
+}

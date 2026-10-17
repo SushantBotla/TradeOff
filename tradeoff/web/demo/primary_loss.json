@@ -1,0 +1,424 @@
+{
+  "provenance": "Recorded execution on the team's LinuxONE VM; synthetic-v1 fixtures; static public replay",
+  "run": {
+    "run_id": "2161d2fbad4d4d8c89dabc7e12dae4b5",
+    "scenario_id": "primary_loss",
+    "status": "completed",
+    "created_at": 1792267413.6287262,
+    "elapsed_ms": 143.49,
+    "explanation": "Both factories accepted round 2. External allocations: A 480, B 300; alternative supply 300. Submitted quantity floors were enforced while original priority signals were retained.",
+    "offer": {
+      "alternate_capacity": 300,
+      "alternate_unit_cost": 95,
+      "primary_capacity": 480
+    },
+    "bids": {
+      "factory_a": {
+        "deadline": "day_5",
+        "priority_signal": 165,
+        "requested_qty": 560
+      },
+      "factory_b": {
+        "deadline": "day_5",
+        "priority_signal": 75,
+        "requested_qty": 450
+      }
+    },
+    "rounds": [
+      {
+        "allocations": {
+          "factory_a": 560,
+          "factory_b": 0
+        },
+        "alternate_qty": 80,
+        "backend": "cbc",
+        "enforced_floors": {},
+        "feedback": {
+          "factory_a": {
+            "accept": true,
+            "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1"
+          },
+          "factory_b": {
+            "accept": false,
+            "minimum_external_qty": 300,
+            "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1"
+          }
+        },
+        "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1",
+        "round_id": 1,
+        "run_id": "2161d2fbad4d4d8c89dabc7e12dae4b5",
+        "solve_ms": 6.848,
+        "status": "optimal",
+        "surrogate_cost": 41350
+      },
+      {
+        "allocations": {
+          "factory_a": 480,
+          "factory_b": 300
+        },
+        "alternate_qty": 300,
+        "backend": "cbc",
+        "enforced_floors": {
+          "factory_b": 300
+        },
+        "feedback": {
+          "factory_a": {
+            "accept": true,
+            "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+          },
+          "factory_b": {
+            "accept": true,
+            "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+          }
+        },
+        "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2",
+        "round_id": 2,
+        "run_id": "2161d2fbad4d4d8c89dabc7e12dae4b5",
+        "solve_ms": 5.79,
+        "status": "optimal",
+        "surrogate_cost": 52950
+      }
+    ],
+    "final_proposal": {
+      "allocations": {
+        "factory_a": 480,
+        "factory_b": 300
+      },
+      "alternate_qty": 300,
+      "backend": "cbc",
+      "enforced_floors": {
+        "factory_b": 300
+      },
+      "feedback": {
+        "factory_a": {
+          "accept": true,
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+        },
+        "factory_b": {
+          "accept": true,
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+        }
+      },
+      "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2",
+      "round_id": 2,
+      "run_id": "2161d2fbad4d4d8c89dabc7e12dae4b5",
+      "solve_ms": 5.79,
+      "status": "optimal",
+      "surrogate_cost": 52950
+    },
+    "transcript": [
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 355,
+        "participant": "factory_a",
+        "path": "/bid",
+        "payload": {
+          "deadline": "day_5",
+          "priority_signal": 165,
+          "requested_qty": 560
+        }
+      },
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 354,
+        "participant": "factory_b",
+        "path": "/bid",
+        "payload": {
+          "deadline": "day_5",
+          "priority_signal": 75,
+          "requested_qty": 450
+        }
+      },
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 368,
+        "participant": "supplier_s",
+        "path": "/bid",
+        "payload": {
+          "alternate_capacity": 300,
+          "alternate_unit_cost": 95,
+          "primary_capacity": 480
+        }
+      },
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 365,
+        "participant": "factory_a",
+        "path": "/validate",
+        "payload": {
+          "accept": true,
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1"
+        }
+      },
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 393,
+        "participant": "factory_b",
+        "path": "/validate",
+        "payload": {
+          "accept": false,
+          "minimum_external_qty": 300,
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1"
+        }
+      },
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 365,
+        "participant": "factory_a",
+        "path": "/validate",
+        "payload": {
+          "accept": true,
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+        }
+      },
+      {
+        "authenticated": true,
+        "direction": "participant_to_coordinator",
+        "envelope_bytes": 365,
+        "participant": "factory_b",
+        "path": "/validate",
+        "payload": {
+          "accept": true,
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+        }
+      }
+    ],
+    "disclosure": {
+      "business_payload_bytes": 493,
+      "business_scalar_values_transmitted": 14,
+      "envelope_bytes": 2565,
+      "note": "Inventory of actual messages, not a privacy guarantee. Feedback and inferred facts can disclose additional information.",
+      "participant_message_count": 7,
+      "unique_business_fields": [
+        "factory_a.accept",
+        "factory_a.deadline",
+        "factory_a.priority_signal",
+        "factory_a.requested_qty",
+        "factory_b.accept",
+        "factory_b.deadline",
+        "factory_b.minimum_external_qty",
+        "factory_b.priority_signal",
+        "factory_b.requested_qty",
+        "supplier_s.alternate_capacity",
+        "supplier_s.alternate_unit_cost",
+        "supplier_s.primary_capacity"
+      ]
+    },
+    "ai": {
+      "configured": true,
+      "fallback_used": false,
+      "feature": "learned delivery-risk prediction; deterministic coordination guardrails",
+      "inference_location": "local LinuxONE/app process",
+      "live_llm_calls": 0,
+      "local_ml_inferences": 2,
+      "mode": "local_ml",
+      "model": "dataco-delay-v1",
+      "provider": "local_logistic_regression",
+      "risk_predictions": {
+        "factory_a": {
+          "delay_probability": 0.997593,
+          "inputs": {
+            "market": "USCA",
+            "scheduled_days": 1,
+            "shipping_mode": "First Class"
+          },
+          "model": "dataco-delay-v1",
+          "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+        },
+        "factory_b": {
+          "delay_probability": 0.45117,
+          "inputs": {
+            "market": "USCA",
+            "scheduled_days": 4,
+            "shipping_mode": "Standard Class"
+          },
+          "model": "dataco-delay-v1",
+          "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+        }
+      }
+    },
+    "agent_actions": [
+      {
+        "arguments": {
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1"
+        },
+        "latency_ms": 0.031,
+        "model": "dataco-delay-v1",
+        "name": "request_validation",
+        "risk_predictions": {
+          "factory_a": {
+            "delay_probability": 0.997593,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 1,
+              "shipping_mode": "First Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          },
+          "factory_b": {
+            "delay_probability": 0.45117,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 4,
+              "shipping_mode": "Standard Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          }
+        },
+        "source": "local_ml_assisted_controller",
+        "validation_order": [
+          "factory_a",
+          "factory_b"
+        ]
+      },
+      {
+        "arguments": {
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1"
+        },
+        "latency_ms": 0.003,
+        "model": "dataco-delay-v1",
+        "name": "reoptimize_with_feedback",
+        "risk_predictions": {
+          "factory_a": {
+            "delay_probability": 0.997593,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 1,
+              "shipping_mode": "First Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          },
+          "factory_b": {
+            "delay_probability": 0.45117,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 4,
+              "shipping_mode": "Standard Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          }
+        },
+        "source": "local_ml_assisted_controller",
+        "validation_order": [
+          "factory_a",
+          "factory_b"
+        ]
+      },
+      {
+        "arguments": {
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+        },
+        "latency_ms": 0.003,
+        "model": "dataco-delay-v1",
+        "name": "request_validation",
+        "risk_predictions": {
+          "factory_a": {
+            "delay_probability": 0.997593,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 1,
+              "shipping_mode": "First Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          },
+          "factory_b": {
+            "delay_probability": 0.45117,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 4,
+              "shipping_mode": "Standard Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          }
+        },
+        "source": "local_ml_assisted_controller",
+        "validation_order": [
+          "factory_a",
+          "factory_b"
+        ]
+      },
+      {
+        "arguments": {
+          "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2"
+        },
+        "latency_ms": 0.004,
+        "model": "dataco-delay-v1",
+        "name": "finalize",
+        "risk_predictions": {
+          "factory_a": {
+            "delay_probability": 0.997593,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 1,
+              "shipping_mode": "First Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          },
+          "factory_b": {
+            "delay_probability": 0.45117,
+            "inputs": {
+              "market": "USCA",
+              "scheduled_days": 4,
+              "shipping_mode": "Standard Class"
+            },
+            "model": "dataco-delay-v1",
+            "provenance": "Local inference from learned historical DataCo coefficients; illustrative domain transfer"
+          }
+        },
+        "source": "local_ml_assisted_controller",
+        "validation_order": [
+          "factory_a",
+          "factory_b"
+        ]
+      }
+    ],
+    "audit_head_at_completion": "2caa890c7919d8c0c108009c77977b4748541e87caab29c9aa06e5592b171163"
+  },
+  "evaluation": {
+    "absolute_regret": 100,
+    "accepted_candidate": true,
+    "disclosure_note": "Oracle allocation and aggregated true costs are extra disclosures to this demo viewer.",
+    "evaluated_at": 1792267413.9750292,
+    "final_true_cost": 45000,
+    "fixture_version": "synthetic-v1",
+    "label": "Privileged synthetic benchmark; not provided to the LLM",
+    "optimality_gap_percent": 0.222717,
+    "oracle": {
+      "allocations": {
+        "factory_a": 460,
+        "factory_b": 300
+      },
+      "alternate_qty": 280,
+      "backend": "independent_exhaustive_integer",
+      "solve_ms": 39.251,
+      "status": "optimal",
+      "true_cost": 44900
+    },
+    "policy_version": "no-severe-shortage-v1",
+    "rounds": [
+      {
+        "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r1",
+        "true_cost": 49900
+      },
+      {
+        "proposal_id": "2161d2fbad4d4d8c89dabc7e12dae4b5_r2",
+        "true_cost": 45000
+      }
+    ],
+    "run_id": "2161d2fbad4d4d8c89dabc7e12dae4b5",
+    "scenario_id": "primary_loss"
+  }
+}

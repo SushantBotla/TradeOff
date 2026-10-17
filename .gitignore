@@ -1,0 +1,11 @@
+.tradeoff/
+.env
+.env.local
+.venv/
+__pycache__/
+*.pyc
+*.log
+dist/
+test-results/
+_site/
+

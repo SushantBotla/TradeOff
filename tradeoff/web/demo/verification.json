@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-10-17T20:03:37.307795+00:00",
+  "runtime": {
+    "architecture": "s390x",
+    "python": "3.12.3",
+    "isolation": "linux_service_users",
+    "version": "0.1.0"
+  },
+  "denial": {
+    "denied": true,
+    "filesystem_enforcement": "linux_service_users",
+    "http_status": 403,
+    "identity": "factory_b",
+    "note": "Real credential-bound API request. Local same-user mode does not enforce filesystem isolation.",
+    "target": "factory_a"
+  },
+  "audit": {
+    "anchor_checked": false,
+    "anchor_matches": true,
+    "assumptions": "Local chain verification; privileged key holders can rewrite it. Export an external anchor to detect truncation/rewrite.",
+    "checked": 125,
+    "failure_event": null,
+    "head": "8fcd8a20c27c5e4b3df1f748eec48e3eab809e3bf91fe5b84362ac6cd84c35d1",
+    "valid": true
+  },
+  "note": "Recorded checks. Verification is rerunnable in the protected runtime; these public records do not contain audit signing keys."
+}

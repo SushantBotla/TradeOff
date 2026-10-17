@@ -1,0 +1,54 @@
+{
+  "kind": "logistic_regression",
+  "version": "dataco-delay-v1",
+  "framework": "Python standard library",
+  "source": "https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis",
+  "source_sha256": "fa6d022ed437155e1a2f0378710602848703c8a7f203f7ff5d77805bf8480aa6",
+  "features": [
+    "intercept",
+    "scheduled_days_div_5",
+    "mode=Standard Class",
+    "mode=Second Class",
+    "mode=First Class",
+    "mode=Same Day",
+    "market=Africa",
+    "market=Europe",
+    "market=LATAM",
+    "market=Pacific Asia",
+    "market=USCA"
+  ],
+  "weights": [
+    1.5818742694902048,
+    -0.45688700269590965,
+    -1.6210435974951745,
+    -0.06404279785844888,
+    4.327824972218174,
+    -1.8173947679341427,
+    0.13856718193940804,
+    0.23340157518650462,
+    0.039660115428093314,
+    0.20498159089890094,
+    0.2087333454775325
+  ],
+  "target": "actual_shipping_days > scheduled_shipping_days",
+  "epochs": 6,
+  "seed": 74129,
+  "train_rows_available": 138211,
+  "train_rows_fitted": 60000,
+  "holdout_rows": 34554,
+  "skipped_rows": 7754,
+  "chronological_cutoff": "2017-04-22T03:43:00",
+  "metrics": {
+    "holdout_accuracy": 0.696012,
+    "holdout_roc_auc": 0.742317,
+    "holdout_brier": 0.189643,
+    "holdout_log_loss": 0.540986,
+    "majority_baseline_accuracy": 0.572871
+  },
+  "limitations": [
+    "Historical retail order-line outcomes, not prospective chip procurement validation.",
+    "No causal improvement or calibrated manufacturing risk is claimed.",
+    "Shipping mode, market and promised days are pre-delivery features; actual days are target only.",
+    "The optimizer and mandatory local validations remain authoritative."
+  ]
+}
